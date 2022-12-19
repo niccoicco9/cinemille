@@ -1,0 +1,17 @@
+<section class="movie__list cine-container">
+    <div class="movie__list-header">
+        <h3 class="movie__list-title">STORICO DEI FILM</h3>
+        <div class="movie__list-filter">
+            <div class="movie__list-datepicker">
+              
+            </div>
+        </div>
+    </div>
+    <div class="movie__list-items">
+        <div class="movie__list-item-wrap" *ngFor="let item of movies" >
+            <div class="movie__list-item" [style.background-image]="'url(https://image.tmdb.org/t/p/w500/' + item.poster_path + ')'">
+                
+            </div>
+        </div>
+    </div>
+</section>

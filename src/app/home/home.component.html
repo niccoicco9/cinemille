@@ -1,0 +1,25 @@
+<section class="movie__list cine-container">
+    <div class="movie__list-header">
+        <h3 class="movie__list-title">FILM IN SALA</h3>
+        <div class="movie__list-filter">
+            <div class="movie__list-datepicker">
+                <mat-form-field appearance="fill">
+                    <mat-label>Inserisci una data</mat-label>
+                    <mat-date-range-input [rangePicker]="picker">
+                      <input matStartDate placeholder="Data di inizio" (dateChange)="onChangeFrom($event)">
+                      <input matEndDate placeholder="Data di fine" (dateChange)="onChangeTo($event)">
+                    </mat-date-range-input>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-date-range-picker #picker></mat-date-range-picker>
+                  </mat-form-field>
+            </div>
+        </div>
+    </div>
+    <div class="movie__list-items">
+        <div class="movie__list-item-wrap" *ngFor="let item of movies" >
+            <div class="movie__list-item" [style.background-image]="'url(https://image.tmdb.org/t/p/w500/' + item.poster_path + ')'">
+                
+            </div>
+        </div>
+    </div>
+</section>

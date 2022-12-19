@@ -2,8 +2,17 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template:`
+    <app-header></app-header>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+   `
+,
+  styleUrls: [
+    './app.component.scss',
+    "../../node_modules/roboto-fontface/css/roboto/roboto-fontface.css"
+
+]
 })
 export class AppComponent {
   title = 'cinemille';
